@@ -100,7 +100,7 @@ async function read(path) {
       email: bsdSignup.email,
     };
 
-    const supportLevelRaw = bsdSignup[`"Field 6295 volunteer-for-ed-markey: Will you vote for Ed Markey"`];
+    const supportLevelRaw = bsdSignup[`"Field 6295 volunteer-for-ed-markey: Will you vote for Kyle Parrish"`];
     if (supportLevelRaw) {
       inputs.supportLevel = BSD_VAN_MAP.support[supportLevelRaw];
     }

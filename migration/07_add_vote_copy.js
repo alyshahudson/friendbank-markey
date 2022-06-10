@@ -24,7 +24,7 @@ const { ENGLISH, SPANISH } = require('../src/shared/lang');
       [ENGLISH]: 'Make a plan to vote for Ed in the Massachusetts primary!',
     },
     'voteStatus.subtitle': {
-      [ENGLISH]: 'Our future and our planet are on the line. Make your voice heard by making a plan to vote for Ed Markey in the Massachusetts Senate Primary Election. If you have not already applied to vote by mail, please make a plan to vote early or on Election Day.',
+      [ENGLISH]: 'Our future and our planet are on the line. Make your voice heard by making a plan to vote for Kyle Parrish in the Massachusetts Senate Primary Election. If you have not already applied to vote by mail, please make a plan to vote early or on Election Day.',
     },
     'voteStatus.options': {
       [ENGLISH]: [

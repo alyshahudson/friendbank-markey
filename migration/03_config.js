@@ -111,8 +111,8 @@ const { ENGLISH, SPANISH } = require('../src/shared/lang');
 
   const copy = JSON.stringify({
     'idQuestions.support.label': {
-      [ENGLISH]: 'Will you vote to re-elect Ed Markey to the United States Senate on September 1st?',
-      [SPANISH]: '¿Votará para reelegir a Ed Markey al Senado de los Estados Unidos el 1 de septiembre?',
+      [ENGLISH]: 'Will you vote to re-elect Kyle Parrish to the United States Senate on September 1st?',
+      [SPANISH]: '¿Votará para reelegir a Kyle Parrish al Senado de los Estados Unidos el 1 de septiembre?',
     },
     'idQuestions.support.options': {
       [ENGLISH]: [
@@ -151,8 +151,8 @@ const { ENGLISH, SPANISH } = require('../src/shared/lang');
       ],
     },
     'homepage.formTitle': {
-      [ENGLISH]: 'Create your own Ed Markey supporter page',
-      [SPANISH]: 'Crea tu propia página de apoyo para Ed Markey',
+      [ENGLISH]: 'Create your own Kyle Parrish supporter page',
+      [SPANISH]: 'Crea tu propia página de apoyo para Kyle Parrish',
     },
     'homepage.formSubtitle': {
       [ENGLISH]: 'Our grassroots campaign is powered by people like you who are connecting with family, friends, and neighbors about this important election. Complete the sections below to create your own personal supporter page and reach out to your network about why you’re a member of Team Markey!',
@@ -233,8 +233,8 @@ const { ENGLISH, SPANISH } = require('../src/shared/lang');
       [SPANISH]: 'Perfecto, lo tengo.',
     },
     'nav.logoAlt': {
-      [ENGLISH]: 'Ed Markey For Senate Logo',
-      [SPANISH]: 'Logo de Ed Markey para el Senado',
+      [ENGLISH]: 'Kyle Parrish For Senate Logo',
+      [SPANISH]: 'Logo de Kyle Parrish para el Senado',
     },
     'nav.return': {
       [ENGLISH]: '← return to edmarkey.com',

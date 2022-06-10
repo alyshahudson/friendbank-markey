@@ -111,7 +111,7 @@ async function fakeMedia({
 }
 
 async function fakeCampaign({
-  domains = ['api:5000'],
+  domains = ['api:3000'],
   name = 'Team Markey',
   config = {
     media: [

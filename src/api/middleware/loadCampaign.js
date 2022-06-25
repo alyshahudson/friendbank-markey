@@ -4,10 +4,15 @@ const getCampaignForDomain = require('../db/getCampaignForDomain');
 module.exports = ({ db }) => {
   async function loadCampaign(req, res, next) {
     try {
+      console.log("loadCampagin fx")
       const host = req.get('host');
+
       const campaign = await getCampaignForDomain(db, host);
+      console.log("host: ", host)
+
 
       if (campaign instanceof Error) {
+        console.log("campaign errors: ", host)
         throw campaign;
       }
 

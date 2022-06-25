@@ -2,6 +2,9 @@ const createApiError = require('../utils/createApiError');
 
 module.exports = async function getCampaignForDomain(db, domain) {
   try {
+    console.log("ENV")
+    console.log(process.env);
+
     const campaigns = db.collection('campaigns');
 
     const campaign = await campaigns.findOne({ domains: domain });

@@ -10,7 +10,8 @@ module.exports = async function findUser(db, email, campaign) {
       email,
       campaign: campaignId,
     });
-
+    console.log("user")
+    console.log(user)
     return user;
   } catch (error) {
     return error;

@@ -5,7 +5,8 @@ module.exports = async function getPageForCode(db, campaign, code) {
     const pages = db.collection('pages');
 
     const page = await pages.findOne({ code, campaign });
-
+    console.log("page")
+    console.log(page)
     return page;
   } catch (error) {
     return createApiError(error, 500, 'Error retrieving page from database');

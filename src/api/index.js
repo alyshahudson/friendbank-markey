@@ -402,24 +402,24 @@ app.get('*', async function (req, res) {
 });
 
 (async function() {
-  // try {
-  //   const client = await MongoClient.connect(MONGODB_URL, {
-  //     useUnifiedTopology: true,
-  //     useNewUrlParser: true,
-  //   });
-  //
-  //   db = client.db();
-  //
-  //   const result = await setupDb(db);
-  //
-  //   if (result instanceof Error) {
-  //     throw result;
-  //   }
-  // } catch (error) {
-  //   console.log('Failed to connect to MongoDB');
-  //   console.error(error);
-  //   process.exit(1);
-  // }
+  try {
+    const client = await MongoClient.connect(MONGODB_URL, {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+    });
+
+    db = client.db();
+
+    const result = await setupDb(db);
+
+    if (result instanceof Error) {
+      throw result;
+    }
+  } catch (error) {
+    console.log('Failed to connect to MongoDB');
+    console.error(error);
+    process.exit(1);
+  }
 
   try {
     template = await fs.readFile(path.join(__dirname, 'template.200.html'), 'utf-8');

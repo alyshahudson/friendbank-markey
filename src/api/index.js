@@ -403,11 +403,14 @@ app.get('*', async function (req, res) {
 
 (async function() {
   try {
+    // todo: remove this
+    console.log(MONGODB_URL)
     const client = await MongoClient.connect(MONGODB_URL, {
       useUnifiedTopology: true,
       useNewUrlParser: true,
     });
 
+    console.log("Connecting to DB here: ")
     db = client.db();
 
     const result = await setupDb(db);

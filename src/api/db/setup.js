@@ -1,5 +1,6 @@
 module.exports = async function setupDb(db) {
   try {
+    console.log("setting up the db")
     const campaigns = db.collection('campaigns');
     await campaigns.createIndex({ domains: 1 });
 

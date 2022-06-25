@@ -405,17 +405,33 @@ app.get('*', async function (req, res) {
   try {
     // todo: remove this
     console.log(MONGODB_URL)
+
+    /*
+
+    MongoClient.connect(url, function(err, client) {
+      assert.equal(null, err);
+      console.log("Connected successfully to server");
+
+      const db = client.db(dbName);
+
+      client.close();
+    });
+
+     */
     const client = await MongoClient.connect(MONGODB_URL, {
       useUnifiedTopology: true,
       useNewUrlParser: true,
     });
 
     console.log("Connecting to DB here: ")
-    db = client.db();
+    // db name is "test" in console
+    db = client.db("test");
 
     const result = await setupDb(db);
 
     if (result instanceof Error) {
+      console.log("result was error")
+      console.log(result)
       throw result;
     }
   } catch (error) {

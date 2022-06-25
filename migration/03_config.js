@@ -237,8 +237,8 @@ const { ENGLISH, SPANISH } = require('../src/shared/lang');
       [SPANISH]: 'Logo de Kyle Parrish para el Senado',
     },
     'nav.return': {
-      [ENGLISH]: '← return to edmarkey.com',
-      [SPANISH]: '← volver a edmarkey.com',
+      [ENGLISH]: '← return to ',
+      [SPANISH]: '← volver a kyleparrishforcongress.com/',
     },
     'nav.returnLink': {
       [ENGLISH]: 'https://www.edmarkey.com/',

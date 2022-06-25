@@ -260,12 +260,12 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
       [SPANISH]: 'Logo de Kyle Parrish para el Senado',
     },
     'nav.return': {
-      [ENGLISH]: '← return to edmarkey.com',
-      [SPANISH]: '← volver a edmarkey.com',
+      [ENGLISH]: '← return to kyleparrishforcongress.com',
+      [SPANISH]: '← volver a kyleparrishforcongress.com',
     },
     'nav.returnLink': {
-      [ENGLISH]: 'https://www.edmarkey.com/',
-      [SPANISH]: 'https://www.edmarkey.com/es/',
+      [ENGLISH]: 'https://kyleparrishforcongress.com/',
+      [SPANISH]: 'https://kyleparrishforcongress.com/',
     },
     'nav.donateForm': {
       [ENGLISH]: 'https://secure.actblue.com/donate/ejm2020',

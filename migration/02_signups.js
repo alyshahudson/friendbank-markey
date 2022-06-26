@@ -105,7 +105,7 @@ async function read(path) {
       inputs.supportLevel = BSD_VAN_MAP.support[supportLevelRaw];
     }
 
-    const volunteerLevelRaw = bsdSignup['"Field 6291 volunteer-for-ed-markey: Will you volunteer with Team"'];
+    const volunteerLevelRaw = bsdSignup['"Field 6291 volunteer-for-ed-markey: Will you volunteer with Team Parrish"'];
     if (volunteerLevelRaw) {
       inputs.volunteerLevel = BSD_VAN_MAP.volunteer[volunteerLevelRaw];
     }

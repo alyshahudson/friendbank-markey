@@ -1,20 +1,34 @@
 const { MongoClient, ObjectId } = require('mongodb');
-const { passwordHash } = require('../utils/auth');
-const { ENGLISH, SPANISH } = require('../../shared/lang');
-const { STAFF_ROLE } = require('../../shared/roles');
-const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
+
+const {
+  MONGODB_URL,
+} = process.env;
+
+const { USER_ROLE } = require('../src/shared/roles');
+const { ENGLISH, SPANISH } = require('../src/shared/lang');
 
 (async function() {
-  console.log('Seeding database...');
-
-  const client = await MongoClient.connect(process.env.MONGODB_URL, {
+  const client = await MongoClient.connect(MONGODB_URL, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   });
 
   db = client.db();
 
-  await db.dropDatabase();
+  const usersCollection = db.collection('users');
+  const users = await usersCollection.find().toArray();
+
+  console.log('updating users');
+
+  for (const user of users) {
+    const userUpdate = {
+      '$set': {
+        role: USER_ROLE,
+      },
+    };
+
+    await usersCollection.updateOne({ _id: user._id }, userUpdate);
+  }
 
   const defaultMediaObjects = [
     {
@@ -79,6 +93,8 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
     },
   ];
 
+  console.log('adding default media');
+
   const media = db.collection('media');
   await media.insertMany(defaultMediaObjects);
 
@@ -117,8 +133,8 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
       ],
     },
     'idQuestions.volunteer.label': {
-      [ENGLISH]: 'Will you volunteer with Team Kyle?',
-      [SPANISH]: '¿Quiéres ser voluntario con el Equipo Kyle?',
+      [ENGLISH]: 'Will you volunteer with Team Kyle Parrish?',
+      [SPANISH]: '¿Quiéres ser voluntario con el Equipo Markey?',
     },
     'idQuestions.volunteer.options': {
       [ENGLISH]: [
@@ -134,52 +150,13 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
         'No',
       ],
     },
-    'idQuestions.vote.label': {
-      [ENGLISH]: 'Are you planning to vote by mail for Kyle in the North Carolina 5th District Congressional Election?',
-    },
-    'idQuestions.vote.subtitle': {
-      [ENGLISH]: 'Voting by mail is the safest way to make your voice heard in this election, and new laws have expanded access to vote by mail in North Carolina for every registered voter. An application to vote by mail will be mailed to each registered voter in MA (or you can download one and mail or email it in). Just complete that application, send it back, and you’ll receive a ballot to vote for Ed by mail. Skip the polls, stay safe, and get your vote for Ed in early -- vote by mail!',
-    },
-    'idQuestions.vote.options': {
-      [ENGLISH]: [
-        'Yes, and I’ve already sent in my vote by mail application',
-        'Yes, and I need a vote by mail application',
-        'No, I’m not sure about voting by mail',
-        'I’d like to learn more about voting by mail',
-      ],
-    },
-    'voteStatus.label': {
-      [ENGLISH]: 'Make a plan to vote for Kyle in the Congressional election!',
-    },
-    'voteStatus.subtitle': {
-      [ENGLISH]: 'Our future and our planet are on the line. Make your voice heard by making a plan to vote for Kyle Parrish in the Massachusetts Senate Primary Election. If you have not already applied to vote by mail, please make a plan to vote early or on Election Day.',
-    },
-    'voteStatus.options': {
-      [ENGLISH]: [
-        'I’ve already voted',
-        'I’ve received my mail-in ballot and still need to return it',
-        'I’m planning to vote early between August 22-28',
-        'I’m planning to vote on Election Day, September 1',
-      ],
-    },
-    'actions.gotv.label': {
-      [ENGLISH]: 'GOTV Actions',
-    },
-    'actions.gotv.options': {
-      [ENGLISH]: [
-        'Received Ballot Application',
-        'Mailed in Ballot Application',
-        'Received Ballot',
-        'Voted for Ed! (Mailed in completed ballot)',
-      ],
-    },
     'homepage.formTitle': {
       [ENGLISH]: 'Create your own Kyle Parrish supporter page',
       [SPANISH]: 'Crea tu propia página de apoyo para Kyle Parrish',
     },
     'homepage.formSubtitle': {
-      [ENGLISH]: 'Our grassroots campaign is powered by people like you who are connecting with family, friends, and neighbors about this important election. Complete the sections below to create your own personal supporter page and reach out to your network about why you’re a member of Team Parrish!',
-      [SPANISH]: 'Nuestra campaña está impulsada por gente como tú que se está conectando con familia, amigos y vecinos sobre esta elección importante. Completa las siguientes secciones para crear tu propia página de apoyo personal y hablarle a tus redes de por qué eres miembro del Equipo Parrish!',
+      [ENGLISH]: 'Our grassroots campaign is powered by people like you who are connecting with family, friends, and neighbors about this important election. Complete the sections below to create your own personal supporter page and reach out to your network about why you’re a member of Team Kyle Parrish!',
+      [SPANISH]: 'Nuestra campaña está impulsada por gente como tú que se está conectando con familia, amigos y vecinos sobre esta elección importante. Completa las siguientes secciones para crear tu propia página de apoyo personal y hablarle a tus redes de por qué eres miembro del Equipo Markey!',
     },
     'homepage.customizeTitle': {
       [ENGLISH]: 'Customize your page',
@@ -198,12 +175,12 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
       [SPANISH]: 'crear página',
     },
     'homepage.defaultTitle': {
-      [ENGLISH]: `{{FIRST_NAME}} is #StickingWithKyle because...`,
-      [SPANISH]: '{{FIRST_NAME}} está #ConKyle porque...'
+      [ENGLISH]: `{{FIRST_NAME}} is #StickingWithEd because...`,
+      [SPANISH]: '{{FIRST_NAME}} está #ConEd porque...'
     },
     'homepage.defaultSubtitle': {
-      [ENGLISH]: 'Kyle will fight to bring the 5th full access to affordable broadband, accessible healthcare, fully funded schools, jobs, and better physical infrastructure!',
-      [SPANISH]: 'Kyle luchará para brindarle al quinto acceso completo a banda ancha asequible, atención médica accesible, escuelas totalmente financiadas, empleos y una mejor infraestructura física!',
+      [ENGLISH]: 'Kyle comes from a working family, and he’s fighting from the heart for the working class. Kyle is running a people-powered campaign, and it’s up to us to help make sure he can keep fighting in the Congress for our shared progressive values. Let me know that you are with me, and help me reach my goal!',
+      [SPANISH]: 'Kyle viene de una familia trabajadora y está luchando con todo su corazón por la clase trabajadora. Kyle está llevando a cabo una campaña impulsada por la gente y depende de nosotros asegurarnos de que pueda seguir luchando en el Congress por nuestros valores progresistas. ¡Háganme saber que están conmigo y ayúdenme a alcanzar mi meta!',
     },
     'signupPage.postSignupSubtitle': {
       [ENGLISH]: 'Next, keep up the momentum by sharing this link with your friends, family, and network, and help {{FIRST_NAME}} reach their goal! Or, make your own page and get everyone you know to join the fight.',
@@ -215,7 +192,7 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
     },
     'signupPage.postSignupCreateSubtitle': {
       [ENGLISH]: 'Create your own supporter page and become a grassroots organizer for Kyle. We’ll show you how!',
-      [SPANISH]: 'Crea tu propia página de apoyo y conviértete en un organizador en tu comunidad para Ed. ¡Te mostraremos cómo!',
+      [SPANISH]: 'Crea tu propia página de apoyo y conviértete en un organizador en tu comunidad para Kyle. ¡Te mostraremos cómo!',
     },
     'signupPage.postSignupCreateButtonLabel': {
       [ENGLISH]: 'Get started',
@@ -236,7 +213,7 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
         ` - Go through your contact list in your phone and text the link to at least 10 people!`,
         ' ',
         `### Volunteer with Team Parrish`,
-        `[Join the movement here](https://kyleparrishforcongress.com/volunteer).`,
+        `[Join the movement here](http://edmarkey.com/volunteer).`,
       ],
       [SPANISH]: [
         '### Comparte tu enlace',
@@ -248,7 +225,7 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
         ` - ¡Revisa la lista de contactos de tu teléfono y envía el enlace al menos a 10 personas!`,
         ` `,
         `### Ser voluntario con el Equipo Parrish`,
-        `[Únete al movimiento aquí](https://kyleparrishforcongress.com/volunteer).`,
+        `[Únete al movimiento aquí](http://edmarkey.com/volunteer).`,
       ],
     },
     'signupPage.modalCloseLabel': {
@@ -257,15 +234,15 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
     },
     'nav.logoAlt': {
       [ENGLISH]: 'Kyle Parrish For Congress Logo',
-      [SPANISH]: 'Logo de Kyle Parrish para el Congress',
+      [SPANISH]: 'Logo de Kyle Parrish para el Congreso',
     },
     'nav.return': {
-      [ENGLISH]: '← return to kyleparrishforcongress.com',
-      [SPANISH]: '← volver a kyleparrishforcongress.com',
+      [ENGLISH]: '← return to kyleparrish.com',
+      [SPANISH]: '← volver a kyleparrish.com',
     },
     'nav.returnLink': {
       [ENGLISH]: 'https://kyleparrishforcongress.com/',
-      [SPANISH]: 'https://kyleparrishforcongress.com/es',
+      [SPANISH]: 'https://kyleparrishforcongress.com/',
     },
     'nav.donateForm': {
       [ENGLISH]: 'https://secure.actblue.com/donate/ejm2020',
@@ -278,25 +255,21 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
       [ENGLISH]: 'Enter your friends, family, and people in your network. Grow your list of the people you’re personally bringing to this grassroots movement, let Ed know if they support him, and help make sure this campaign reaches its goals.',
       [SPANISH]: 'Añade a tus amigos, familiares y personas de tu red. Crece tu lista de personas que personalmente trajiste a este movimiento impulsado por el pueblo, déjale saber a Ed si lo apoyan y ayuda a la campaña a alcanzar sus metas.',
     },
-    'phonebankPage.successfullySubmitted': {
-      [ENGLISH]: 'Successfully submitted contact!',
-      [SPANISH]: '¡Contacto creado con éxito!',
-    },
     'privacyPolicy.label': {
       [ENGLISH]: 'Privacy Policy',
       [SPANISH]: 'Política de privacidad',
     },
     'privacyPolicy.link': {
-      [ENGLISH]: 'https://kyleparrishforcongress.com/privacy-policy/',
-      [SPANISH]: 'https://kyleparrishforcongress.com/privacy-policy/',
+      [ENGLISH]: 'https://kyleparrishforcongress.com/privacy-policy',
+      [SPANISH]: 'https://kyleparrishforcongress.com/privacy-policy',
     },
     'politicalDiclaimer': {
-      [ENGLISH]: 'PAID FOR BY THE PARRISH COMMITTEE',
-      [SPANISH]: 'PAGADO POR THE PARRISH COMMITTEE',
+      [ENGLISH]: 'PAID FOR BY THE KYLE PARRISH COMMITTEE',
+      [SPANISH]: 'PAGADO POR THE KYLE PARRISH COMMITTEE',
     },
     'smsDisclaimer': {
-      [ENGLISH]: 'By providing your cell phone number you consent to receive periodic campaign updates from the Parrish Committee. Text HELP for help, STOP to end. Message & data rates may apply. https://www.edmarkey.com/privacy-policy/',
-      [SPANISH]: 'Al proporcionar su número de teléfono celular usted consiente en recibir actualizaciones periódicas de la campaña de The Parrish Committee. Envíe un mensaje de texto que diga HELP para pedir ayuda o STOP para descontinuar los mensajes. Pueden aplicar tarifas de mensajes y data. https://www.edmarkey.com/privacy-policy/',
+      [ENGLISH]: 'By providing your cell phone number you consent to receive periodic campaign updates from the Kyle Parrish Committee. Text HELP for help, STOP to end. Message & data rates may apply. https://kyleparrishforcongress.com/privacy-policy/',
+      [SPANISH]: 'Al proporcionar su número de teléfono celular usted consiente en recibir actualizaciones periódicas de la campaña de The Kyle Parrish Committee. Envíe un mensaje de texto que diga HELP para pedir ayuda o STOP para descontinuar los mensajes. Pueden aplicar tarifas de mensajes y data. https://kyleparrishforcongress.com/privacy-policy/',
     },
     'genericError': {
       [ENGLISH]: 'Looks like we had an error, try again? If this continues to happen, please contact us https://kyleparrishforcongress.com/m/login?r=%2Fcontact-us',
@@ -304,54 +277,16 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
     },
   });
 
+  console.log('updating campaign');
+
   const campaigns = db.collection('campaigns');
-  const campaignResult = await campaigns.insertOne({
-    domains: ['localhost:3000','damp-anchorage-15468.herokuapp.com','https://damp-anchorage-15468.herokuapp.com'],
-    name: 'Parrish',
-    copy,
-    config,
-  });
-
-  const campaign = campaignResult.ops[0];
-  const campaignId = campaign._id.toString();
-
-  const hashedPassword = await passwordHash('password');
-  const users = db.collection('users');
-
-  const userInsertResult = await users.insertOne({
-    campaign: campaignId,
-    email: 'admin@friendbank.us',
-    password: hashedPassword,
-    firstName: 'Joe',
-    zip: '00000',
-    emailFrequency: TRANSACTIONAL_EMAIL,
-    createdAt: Date.now(),
-    lastUpdatedAt: Date.now(),
-    lastAuthenticationUpdate: Date.now(),
-    role: STAFF_ROLE,
-  });
-
-  const adminUser = userInsertResult.ops[0];
-
-  const signups = db.collection('signups');
-  const signupSeed = new Array(50).fill({
-    email: `${Math.round(Math.random() * 10000)}@gmail.com`,
-    recruitedBy: adminUser._id.toString(),
-    campaign: campaign._id.toString(),
-    type: 'contact',
-    lastUpdatedAt: Date.now(),
-    firstName: 'First',
-    phone: '',
-    zip: '',
-    supportLevel: '',
-    volunteerLevel: '',
-  }).map((signup, index) => ({
-    ...signup,
-    _id: new ObjectId(),
-    lastName: `${index}`,
-    note: `This is a note ${Math.random()}`,
-  }));
-
-  await signups.insertMany(signupSeed);
-  process.exit(0);
+  await campaigns.updateOne(
+    { domains: 'support.edmarkey.com' },
+    {
+      '$set': {
+        copy,
+        config,
+      },
+    },
+  );
 })();

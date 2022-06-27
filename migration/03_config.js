@@ -34,61 +34,61 @@ const { ENGLISH, SPANISH } = require('../src/shared/lang');
     {
       _id: 'default',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/em-header-original.jpg',
+      source: 'fulllogo.png',
       alt: 'Ed at the Podium',
     },
     {
       _id: 'hoops',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/hoops.jpg',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed shooting hoops',
     },
     {
       _id: 'air-flight-89',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/air-flight-89.png',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed wearing his pair of Air Flight ‘89s',
     },
     {
       _id: 'ed-clapping',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/Ed+Clap.jpg',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed clapping at an event',
     },
     {
       _id: 'ed-climate-march',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/Taylor+St.+Germain+-+P2+Markey+(52+of+70).jpg',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed at a climate march with young students',
     },
     {
       _id: 'ed-serving',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/Ed+Serving.JPG',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed serving food',
     },
     {
       _id: 'ed-seiu',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/Taylor+St.+Germain+-+32BJ8.jpg',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed standing with SEIU supporters',
     },
     {
       _id: 'ed-laughing',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/IMG_3417.JPG',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed laughing',
     },
     {
       _id: 'ed-ew-supporters',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/IMG_7718.JPG',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed standing with supporters'
     },
     {
       _id: 'ed-unite-here',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/IMG_3743.JPG',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed marching with a labor union',
     },
   ];
@@ -104,7 +104,7 @@ const { ENGLISH, SPANISH } = require('../src/shared/lang');
     defaultMedia: {
       _id: 'ed-climate-march',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/Taylor+St.+Germain+-+P2+Markey+(52+of+70).jpg',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed at a climate march with young students',
     },
   });
@@ -175,8 +175,8 @@ const { ENGLISH, SPANISH } = require('../src/shared/lang');
       [SPANISH]: 'crear página',
     },
     'homepage.defaultTitle': {
-      [ENGLISH]: `{{FIRST_NAME}} is #StickingWithEd because...`,
-      [SPANISH]: '{{FIRST_NAME}} está #ConEd porque...'
+      [ENGLISH]: `{{FIRST_NAME}} is #StickingWithKyle because...`,
+      [SPANISH]: '{{FIRST_NAME}} está #ConKyle porque...'
     },
     'homepage.defaultSubtitle': {
       [ENGLISH]: 'Kyle comes from a working family, and he’s fighting from the heart for the working class. Kyle is running a people-powered campaign, and it’s up to us to help make sure he can keep fighting in the Congress for our shared progressive values. Let me know that you are with me, and help me reach my goal!',
@@ -252,7 +252,7 @@ const { ENGLISH, SPANISH } = require('../src/shared/lang');
       [SPANISH]: 'Añadir un contacto',
     },
     'phonebankPage.subtitle': {
-      [ENGLISH]: 'Enter your friends, family, and people in your network. Grow your list of the people you’re personally bringing to this grassroots movement, let Ed know if they support him, and help make sure this campaign reaches its goals.',
+      [ENGLISH]: 'Enter your friends, family, and people in your network. Grow your list of the people you’re personally bringing to this grassroots movement, let Kyle know if they support him, and help make sure this campaign reaches its goals.',
       [SPANISH]: 'Añade a tus amigos, familiares y personas de tu red. Crece tu lista de personas que personalmente trajiste a este movimiento impulsado por el pueblo, déjale saber a Ed si lo apoyan y ayuda a la campaña a alcanzar sus metas.',
     },
     'privacyPolicy.label': {

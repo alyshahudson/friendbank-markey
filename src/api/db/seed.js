@@ -20,61 +20,61 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
     {
       _id: 'default',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/em-header-original.jpg',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed at the Podium',
     },
     {
       _id: 'hoops',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/hoops.jpg',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed shooting hoops',
     },
     {
       _id: 'air-flight-89',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/air-flight-89.png',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed wearing his pair of Air Flight ‘89s',
     },
     {
       _id: 'ed-clapping',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/Ed+Clap.jpg',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed clapping at an event',
     },
     {
       _id: 'ed-climate-march',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/Taylor+St.+Germain+-+P2+Markey+(52+of+70).jpg',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed at a climate march with young students',
     },
     {
       _id: 'ed-serving',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/Ed+Serving.JPG',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed serving food',
     },
     {
       _id: 'ed-seiu',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/Taylor+St.+Germain+-+32BJ8.jpg',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed standing with SEIU supporters',
     },
     {
       _id: 'ed-laughing',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/IMG_3417.JPG',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed laughing',
     },
     {
       _id: 'ed-ew-supporters',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/IMG_7718.JPG',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed standing with supporters'
     },
     {
       _id: 'ed-unite-here',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/IMG_3743.JPG',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed marching with a labor union',
     },
   ];
@@ -88,7 +88,7 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
     defaultMedia: {
       _id: 'ed-climate-march',
       type: 'image',
-      source: 'https://ed-markey-supporter-photos.s3.amazonaws.com/Taylor+St.+Germain+-+P2+Markey+(52+of+70).jpg',
+      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
       alt: 'Ed at a climate march with young students',
     },
   });

@@ -21,7 +21,7 @@ const { ENGLISH, SPANISH } = require('../src/shared/lang');
   const copy = JSON.stringify({
     ...JSON.parse(markeyCampaign.copy),
     'voteStatus.label': {
-      [ENGLISH]: 'Make a plan to vote for Kyle Parrish in the North Carolina District 5 Congressional Election!',
+      [ENGLISH]: 'Make a plan to vote for Kyle Parrish in the North Carolina District 5th Congressional Election!',
     },
     'voteStatus.subtitle': {
       [ENGLISH]: 'Our future and our planet are on the line. Make your voice heard by making a plan to vote for Kyle Parrish in the North Carolina District 5 Congressional Election. If you have not already applied to vote by mail, please make a plan to vote early or on Election Day.',

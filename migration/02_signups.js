@@ -100,12 +100,12 @@ async function read(path) {
       email: bsdSignup.email,
     };
 
-    const supportLevelRaw = bsdSignup[`"Field 6295 volunteer-for-ed-markey: Will you vote for Kyle Parrish"`];
+    const supportLevelRaw = bsdSignup[`"Field 6295 volunteer-for-kyle-parrish: Will you vote for Kyle Parrish?"`];
     if (supportLevelRaw) {
       inputs.supportLevel = BSD_VAN_MAP.support[supportLevelRaw];
     }
 
-    const volunteerLevelRaw = bsdSignup['"Field 6291 volunteer-for-ed-markey: Will you volunteer with Team Parrish"'];
+    const volunteerLevelRaw = bsdSignup['"Field 6291 volunteer-for-kyle-parrish: Will you volunteer with Team Parrish?"'];
     if (volunteerLevelRaw) {
       inputs.volunteerLevel = BSD_VAN_MAP.volunteer[volunteerLevelRaw];
     }

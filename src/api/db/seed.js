@@ -20,61 +20,61 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
     {
       _id: 'default',
       type: 'image',
-      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
       alt: 'Ed at the Podium',
     },
     {
       _id: 'hoops',
       type: 'image',
-      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
       alt: 'Ed shooting hoops',
     },
     {
       _id: 'air-flight-89',
       type: 'image',
-      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
       alt: 'Ed wearing his pair of Air Flight ‘89s',
     },
     {
       _id: 'ed-clapping',
       type: 'image',
-      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
       alt: 'Ed clapping at an event',
     },
     {
       _id: 'ed-climate-march',
       type: 'image',
-      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
       alt: 'Ed at a climate march with young students',
     },
     {
       _id: 'ed-serving',
       type: 'image',
-      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
       alt: 'Ed serving food',
     },
     {
       _id: 'ed-seiu',
       type: 'image',
-      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
-      alt: 'Ed standing with SEIU supporters',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
+      alt: 'Ed standing with supporters',
     },
     {
       _id: 'ed-laughing',
       type: 'image',
-      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
       alt: 'Ed laughing',
     },
     {
       _id: 'ed-ew-supporters',
       type: 'image',
-      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
       alt: 'Ed standing with supporters'
     },
     {
       _id: 'ed-unite-here',
       type: 'image',
-      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
       alt: 'Ed marching with a labor union',
     },
   ];
@@ -88,15 +88,15 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
     defaultMedia: {
       _id: 'ed-climate-march',
       type: 'image',
-      source: '/Users/shaaravrotiwar/Downloads/fulllogo.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
       alt: 'Ed at a climate march with young students',
     },
   });
 
   const copy = JSON.stringify({
     'idQuestions.support.label': {
-      [ENGLISH]: 'Will you vote to re-elect Kyle Parrish to the United States Senate on September 1st?',
-      [SPANISH]: '¿Votará para reelegir a Kyle Parrish al Senado de los Estados Unidos el 1 de septiembre?',
+      [ENGLISH]: 'Will you commit tvote to elect Kyle Parrish to Congress for the North Carolina 5th Congressional District?',
+      [SPANISH]: '¿Comprometerá votar para elegir a Kyle Parrish al Congreso por el 5to Distrito Congresional de Carolina del Norte?',
     },
     'idQuestions.support.options': {
       [ENGLISH]: [
@@ -117,8 +117,8 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
       ],
     },
     'idQuestions.volunteer.label': {
-      [ENGLISH]: 'Will you volunteer with Team Kyle?',
-      [SPANISH]: '¿Quiéres ser voluntario con el Equipo Kyle?',
+      [ENGLISH]: 'Will you volunteer with Team Parrish?',
+      [SPANISH]: '¿Quiéres ser voluntario con el Equipo Parrish?',
     },
     'idQuestions.volunteer.options': {
       [ENGLISH]: [
@@ -170,7 +170,7 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
         'Received Ballot Application',
         'Mailed in Ballot Application',
         'Received Ballot',
-        'Voted for Ed! (Mailed in completed ballot)',
+        'Voted for Kyle! (Mailed in completed ballot)',
       ],
     },
     'homepage.formTitle': {
@@ -215,15 +215,15 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
     },
     'signupPage.postSignupCreateSubtitle': {
       [ENGLISH]: 'Create your own supporter page and become a grassroots organizer for Kyle. We’ll show you how!',
-      [SPANISH]: 'Crea tu propia página de apoyo y conviértete en un organizador en tu comunidad para Ed. ¡Te mostraremos cómo!',
+      [SPANISH]: 'Crea tu propia página de apoyo y conviértete en un organizador en tu comunidad para Kyle. ¡Te mostraremos cómo!',
     },
     'signupPage.postSignupCreateButtonLabel': {
       [ENGLISH]: 'Get started',
       [SPANISH]: 'Comenzar',
     },
     'signupPage.modalTitle': {
-      [ENGLISH]: `Here's how you can join Kyle's fight`,
-      [SPANISH]: 'Como puedes unirte a la lucha de Kyle',
+      [ENGLISH]: `Here's how you can join in and support Kyle's campaign:`,
+      [SPANISH]: 'Así es como puede unirse y apoyar la campaña de Kyle',
     },
     'signupPage.modalCopy': {
       [ENGLISH]: [
@@ -268,7 +268,7 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
       [SPANISH]: 'https://kyleparrishforcongress.com/es',
     },
     'nav.donateForm': {
-      [ENGLISH]: 'https://secure.actblue.com/donate/ejm2020',
+      [ENGLISH]: 'https://secure.actblue.com/donate/win5',
     },
     'phonebankPage.title': {
       [ENGLISH]: 'Add a Contact',
@@ -295,8 +295,8 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
       [SPANISH]: 'PAGADO POR THE PARRISH COMMITTEE',
     },
     'smsDisclaimer': {
-      [ENGLISH]: 'By providing your cell phone number you consent to receive periodic campaign updates from the Parrish Committee. Text HELP for help, STOP to end. Message & data rates may apply. https://www.edmarkey.com/privacy-policy/',
-      [SPANISH]: 'Al proporcionar su número de teléfono celular usted consiente en recibir actualizaciones periódicas de la campaña de The Parrish Committee. Envíe un mensaje de texto que diga HELP para pedir ayuda o STOP para descontinuar los mensajes. Pueden aplicar tarifas de mensajes y data. https://www.edmarkey.com/privacy-policy/',
+      [ENGLISH]: 'By providing your cell phone number you consent to receive periodic campaign updates from the Parrish Committee. Text HELP for help, STOP to end. Message & data rates may apply. https://kyleparrishforcongress.com/privacy-policy',
+      [SPANISH]: 'Al proporcionar su número de teléfono celular usted consiente en recibir actualizaciones periódicas de la campaña de The Parrish Committee. Envíe un mensaje de texto que diga HELP para pedir ayuda o STOP para descontinuar los mensajes. Pueden aplicar tarifas de mensajes y data. https://kyleparrishforcongress.com/privacy-policy',
     },
     'genericError': {
       [ENGLISH]: 'Looks like we had an error, try again? If this continues to happen, please contact us https://kyleparrishforcongress.com/m/login?r=%2Fcontact-us',

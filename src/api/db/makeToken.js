@@ -18,6 +18,8 @@ module.exports = async function makeToken(db, user, expiresAfter = ms('30 days')
       expiresAt: Date.now() + expiresAfter,
     });
 
+    console.log("tokenValue")
+    console.log(tokenValue)
     return tokenValue;
   } catch (error) {
     return createApiError(error, 500, 'Error retrieving page from database');

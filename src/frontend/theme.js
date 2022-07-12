@@ -8,6 +8,7 @@ const theme = {
     darkBlue: '#00284a',
     green: '#009645',
     red: '#FF3333',
+    ncblues: '#4B9CD3',
   },
   fonts: {
     mainFamily: 'Museo Sans',

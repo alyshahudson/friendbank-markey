@@ -20,6 +20,8 @@ module.exports = async function getToken(db, token) {
       return null;
     }
 
+    console.log("{ ...match, user }")
+    console.log({ ...match, user })
     return { ...match, user };
   } catch (error) {
     return createApiError(error, 500, 'Error retrieving token from database');

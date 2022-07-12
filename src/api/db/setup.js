@@ -1,5 +1,6 @@
 module.exports = async function setupDb(db) {
   try {
+    console.log("setting up the db")
     const campaigns = db.collection('campaigns');
     await campaigns.createIndex({ domains: 1 });
 
@@ -15,9 +16,11 @@ module.exports = async function setupDb(db) {
 
     const users = db.collection('users');
     await users.createIndex({ email: 1, campaign: 1 });
-
+    console.log("setup succeeded, returning true")
     return true;
   } catch (error) {
+    console.log("error in setup")
+    console.log(error)
     return error;
   }
 }

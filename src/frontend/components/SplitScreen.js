@@ -90,11 +90,11 @@ export default function SplitScreen(props) {
           {children}
         </ContentPanelContainer>
       </ContentPanel>
-      <MediaPanel>
-        {media && media.type === 'image' && (
-          <MediaImage src={media.source} alt={media.alt} />
-        )}
-      </MediaPanel>
+      {/*<MediaPanel>*/}
+      {/*  {media && media.type === 'image' && (*/}
+      {/*    <MediaImage src={media.source} alt={media.alt} />*/}
+      {/*  )}*/}
+      {/*</MediaPanel>*/}
     </Layout>
   );
 }

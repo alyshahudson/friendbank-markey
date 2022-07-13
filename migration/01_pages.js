@@ -37,7 +37,7 @@ const {
         'ed-markey-support-prod.herokuapp.com',
         'support.edmarkey.com',
       ],
-      name: 'Team Kyle Parrish',
+      name: 'Team Parrish',
     };
 
     const campaignInsertResult = await campaigns.insertOne(markeyCampaignData);

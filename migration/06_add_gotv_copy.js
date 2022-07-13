@@ -24,7 +24,7 @@ const { ENGLISH, SPANISH } = require('../src/shared/lang');
       [ENGLISH]: 'Are you planning to vote by mail for Kyle Parrish in the North Carolina District 5 Congressional Election?',
     },
     'idQuestions.vote.subtitle': {
-      [ENGLISH]: 'Voting by mail is the safest way to make your voice heard in this election, and new laws have expanded access to vote by mail in North Carolina for every registered voter. An application to vote by mail will be mailed to each registered voter in NC (or you can download one and mail or email it in). Just complete that application, send it back, and you’ll receive a ballot to vote for Ed by mail. Skip the polls, stay safe, and get your vote for Kyle Parrish in early -- vote by mail!',
+      [ENGLISH]: 'Voting by mail is the easiest way to make your voice heard in this election, and yet Republicans are trying to pass laws to make it harder to vote by mail. Make sure you follow all the rules and fill out the correct forms to Vote Early by Mail. Skip the polls, stay safe, and get your vote for Kyle Parrish in early -- vote by mail!',
     },
     'idQuestions.vote.options': {
       [ENGLISH]: [

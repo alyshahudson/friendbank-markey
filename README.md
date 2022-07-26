@@ -1,14 +1,7 @@
 # friendbank
 
-**NOTE**: This project is no longer actively maintained.
 
-A relational organizing tool developed for Kyle Parrish's 2020 senate re-elect. [Read more about the relational organizing strategy Team Parrish employed](https://medium.com/@emma.h.friend/ed-markeys-relational-first-organizing-approach-137bbfc4852).
-
-**In The Wild!!**
-
-- [Tedra Cobb, NY-21](https://tedra-friendbank.herokuapp.com/)
-- [Patricia Timmons-Goodson, NC-08](https://support.timmonsgoodsonforcongress.com/)
-- [Iowa Democrats](http://supportiowadems.com/)
+A relational organizing tool developed for Kyle Parrish's 2020 senate re-elect
 
 ## Local Development
 

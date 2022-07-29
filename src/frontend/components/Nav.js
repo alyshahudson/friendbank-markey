@@ -199,7 +199,7 @@ export default function Nav(props) {
       </RedirectRow>
       <NavContainer>
         <Logo href={makeLocaleLink(HOMEPAGE_ROUTE)}>
-          <img src="https://ed-markey-supporter-photos.s3.amazonaws.com/logo.png" alt={getCopy('nav.logoAlt')} />
+          <img src="https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo.png" alt={getCopy('nav.logoAlt')} sizes="8x8"/>
         </Logo>
         <NavItemsContainer>
           <LeftLink href={languageLink}>

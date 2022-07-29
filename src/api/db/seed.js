@@ -20,61 +20,61 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
     {
       _id: 'default',
       type: 'image',
-      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_8667.HEIC',
       alt: 'Ed at the Podium',
     },
     {
       _id: 'hoops',
       type: 'image',
-      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_8739.HEIC',
       alt: 'Ed shooting hoops',
     },
     {
       _id: 'air-flight-89',
       type: 'image',
-      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_8744.HEIC',
       alt: 'Ed wearing his pair of Air Flight ‘89s',
     },
     {
       _id: 'ed-clapping',
       type: 'image',
-      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_9705.HEIC',
       alt: 'Ed clapping at an event',
     },
     {
       _id: 'ed-climate-march',
       type: 'image',
-      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_9796.HEIC',
       alt: 'Ed at a climate march with young students',
     },
     {
       _id: 'ed-serving',
       type: 'image',
-      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_9832.HEIC',
       alt: 'Ed serving food',
     },
     {
       _id: 'ed-seiu',
       type: 'image',
-      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_9872.HEIC',
       alt: 'Ed standing with supporters',
     },
     {
       _id: 'ed-laughing',
       type: 'image',
-      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_9900.HEIC',
       alt: 'Ed laughing',
     },
     {
       _id: 'ed-ew-supporters',
       type: 'image',
-      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_9906.HEIC',
       alt: 'Ed standing with supporters'
     },
     {
       _id: 'ed-unite-here',
       type: 'image',
-      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_9914.HEIC',
       alt: 'Ed marching with a labor union',
     },
   ];
@@ -88,14 +88,14 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
     defaultMedia: {
       _id: 'ed-climate-march',
       type: 'image',
-      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/fwdparrishgraphics+(1)/fulllogo+Sideways.png',
+      source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_8089.HEIC',
       alt: 'Ed at a climate march with young students',
     },
   });
 
   const copy = JSON.stringify({
     'idQuestions.support.label': {
-      [ENGLISH]: 'Will you commit tvote to elect Kyle Parrish to Congress for the North Carolina 5th Congressional District?',
+      [ENGLISH]: 'Will you commit to vote to elect Kyle Parrish to Congress for the North Carolina 5th Congressional District?',
       [SPANISH]: '¿Comprometerá votar para elegir a Kyle Parrish al Congreso por el 5to Distrito Congresional de Carolina del Norte?',
     },
     'idQuestions.support.options': {
@@ -138,7 +138,7 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
       [ENGLISH]: 'Are you planning to vote by mail for Kyle in the North Carolina 5th District Congressional Election?',
     },
     'idQuestions.vote.subtitle': {
-      [ENGLISH]: 'Voting by mail is the safest way to make your voice heard in this election, and new laws have expanded access to vote by mail in North Carolina for every registered voter. An application to vote by mail will be mailed to each registered voter in MA (or you can download one and mail or email it in). Just complete that application, send it back, and you’ll receive a ballot to vote for Ed by mail. Skip the polls, stay safe, and get your vote for Ed in early -- vote by mail!',
+      [ENGLISH]: 'Voting by mail is the safest way to make your voice heard in this election. An application to vote by mail will be mailed to each registered voter in NC (or you can download one and mail or email it in). Just complete that application, send it back, and you’ll receive a ballot to vote for Kyle by mail. Skip the polls, stay safe, and get your vote for Kyle in early -- vote by mail!',
     },
     'idQuestions.vote.options': {
       [ENGLISH]: [
@@ -152,14 +152,14 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
       [ENGLISH]: 'Make a plan to vote for Kyle in the Congressional election!',
     },
     'voteStatus.subtitle': {
-      [ENGLISH]: 'Our future and our planet are on the line. Make your voice heard by making a plan to vote for Kyle Parrish in the Massachusetts Senate Primary Election. If you have not already applied to vote by mail, please make a plan to vote early or on Election Day.',
+      [ENGLISH]: 'Our future and our planet are on the line. Make your voice heard by making a plan to vote for Kyle Parrish in the North Carolina District 5 Congressional District. If you have not already applied to vote by mail, please make a plan to vote early or on Election Day.',
     },
     'voteStatus.options': {
       [ENGLISH]: [
         'I’ve already voted',
         'I’ve received my mail-in ballot and still need to return it',
-        'I’m planning to vote early between August 22-28',
-        'I’m planning to vote on Election Day, September 1',
+        'I’m planning to vote early between October 20th - November 5th',
+        'I’m planning to vote on Election Day,  November 8th',
       ],
     },
     'actions.gotv.label': {
@@ -275,8 +275,8 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
       [SPANISH]: 'Añadir un contacto',
     },
     'phonebankPage.subtitle': {
-      [ENGLISH]: 'Enter your friends, family, and people in your network. Grow your list of the people you’re personally bringing to this grassroots movement, let Ed know if they support him, and help make sure this campaign reaches its goals.',
-      [SPANISH]: 'Añade a tus amigos, familiares y personas de tu red. Crece tu lista de personas que personalmente trajiste a este movimiento impulsado por el pueblo, déjale saber a Ed si lo apoyan y ayuda a la campaña a alcanzar sus metas.',
+      [ENGLISH]: 'Enter your friends, family, and people in your network. Grow your list of the people you’re personally bringing to this grassroots movement, let Kyle know if they support him, and help make sure this campaign reaches its goals.',
+      [SPANISH]: 'Añade a tus amigos, familiares y personas de tu red. Crece tu lista de personas que personalmente trajiste a este movimiento impulsado por el pueblo, déjale saber a Kyle si lo apoyan y ayuda a la campaña a alcanzar sus metas.',
     },
     'phonebankPage.successfullySubmitted': {
       [ENGLISH]: 'Successfully submitted contact!',

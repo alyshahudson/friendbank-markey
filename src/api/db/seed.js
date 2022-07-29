@@ -63,7 +63,7 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
       _id: 'ed-laughing',
       type: 'image',
       source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_9900.HEIC',
-      alt: 'Ed laughing',
+      alt: 'Kyle laughing',
     },
     {
       _id: 'ed-ew-supporters',

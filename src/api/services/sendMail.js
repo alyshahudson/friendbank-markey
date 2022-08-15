@@ -27,18 +27,24 @@ async function sendMail(
     };
 
     if (MAIL_DEBUG) {
+      console.log("mail debug is on")
       message.mailSettings = {
         sandboxMode: {
-          enable: true,
+          enable: false,
         },
       };
 
       await _writeServiceOutput('mail', message);
     }
-
+    console.log("Sending message")
     await mail.send(message);
+    console.log(message)
+    console.log("Sent!")
+
   } catch (error) {
     error.message = JSON.stringify(error);
+    console.log("ERROR!!!!!!!!!!!!!!!!!!")
+    console.log(error.message)
     return error;
   }
 }

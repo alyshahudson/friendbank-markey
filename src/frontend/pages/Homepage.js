@@ -302,14 +302,15 @@ export default function Homepage(props) {
   }
 
   return (
-      <div>
-      <StandardHelmet />
-      <Form
-        formId="create"
-        steps={clientSteps}
-        onFormValueChange={onFormValueChange}
-        onCompletion={onCompletion}
-      />
-    </div>
+      <SplitScreen media={getConfig('defaultMedia')}>
+        <StandardHelmet />
+        <Form
+            formId="create"
+            steps={clientSteps}
+            onFormValueChange={onFormValueChange}
+            onCompletion={onCompletion}
+        />
+      </SplitScreen>
+
   );
 }

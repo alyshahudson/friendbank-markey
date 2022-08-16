@@ -295,7 +295,7 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
       [SPANISH]: 'PAGADO POR THE PARRISH COMMITTEE',
     },
     'smsDisclaimer': {
-      [ENGLISH]: 'By providing your cell phone number you consent to receive periodic campaign updates from the Parrish Committee. Text HELP for help, STOP to end. Message & data rates may apply. https://kyleparrishforcongress.com/privacy-policy',
+      [ENGLISH]: 'By providing your cell phone number you consent to receive periodic campaign updates from the Parrish Committee. Text HELP for help, STOP to end. Message & data rates may apply.',
       [SPANISH]: 'Al proporcionar su número de teléfono celular usted consiente en recibir actualizaciones periódicas de la campaña de The Parrish Committee. Envíe un mensaje de texto que diga HELP para pedir ayuda o STOP para descontinuar los mensajes. Pueden aplicar tarifas de mensajes y data. https://kyleparrishforcongress.com/privacy-policy',
     },
     'genericError': {
@@ -322,7 +322,7 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
     campaign: campaignId,
     email: 'admin@friendbank.us',
     password: hashedPassword,
-    firstName: 'Joe',
+    firstName: 'Aly Hudson',
     zip: '00000',
     emailFrequency: TRANSACTIONAL_EMAIL,
     createdAt: Date.now(),
@@ -334,7 +334,7 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
   const adminUser = userInsertResult.ops[0];
 
   const signups = db.collection('signups');
-  const signupSeed = new Array(50).fill({
+  const signupSeed = new Array(1).fill({
     email: `${Math.round(Math.random() * 10000)}@gmail.com`,
     recruitedBy: adminUser._id.toString(),
     campaign: campaign._id.toString(),

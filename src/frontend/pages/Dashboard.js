@@ -3,8 +3,8 @@ import styled, { css } from 'styled-components';
 import StandardHelmet from '../components/StandardHelmet';
 import LoadingSpinner from '../components/LoadingSpinner';
 import SignupsTable from '../components/SignupsTable';
-import { DarkBlueButton } from '../components/Buttons';
-import Form, { FormContainer, FormTitleContainer } from '../components/Form';
+import {DarkBlueButton, RedButton} from '../components/Buttons';
+import Form, {FormContainer, FormSubmitButton, FormTitleContainer} from '../components/Form';
 import {
   SINGLE_LINE_TEXT_INPUT,
   PASSWORD_INPUT,
@@ -393,6 +393,11 @@ export default function Dashboard() {
         <CardGrid>
           <CardSubheader>
             {getCopy('dashboard.editProfileHeader')}
+            <FormSubmitButton
+                type="submit"
+                disabled={false}
+                data-track="form-submit-button"
+            >+</FormSubmitButton>
           </CardSubheader>
           <LoadingSpinner hasCompletedLoading={!!profile}>
             <Form
@@ -472,6 +477,9 @@ export default function Dashboard() {
       <SignupPagesCard>
         <CardHeader>
           {getCopy('dashboard.signupPagesHeader')}
+          <RedButton as="a" href={makeLocaleLink("/")} data-track="create-my-own">
+            +
+          </RedButton>
         </CardHeader>
         <CardGrid>
           <LoadingSpinner hasCompletedLoading={!!signupPages}>
@@ -531,3 +539,4 @@ export default function Dashboard() {
     </Layout>
   );
 }
+

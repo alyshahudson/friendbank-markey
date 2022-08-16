@@ -26,7 +26,7 @@ async function sendMail(
       dynamic_template_data: templateData,
     };
 
-    if (MAIL_DEBUG === "true") {
+    if (MAIL_DEBUG.toString().toLocaleLowerCase().equals("true")) {
       console.log("mail debug is on")
       message.mailSettings = {
         sandboxMode: {
@@ -44,7 +44,7 @@ async function sendMail(
   } catch (error) {
     error.message = JSON.stringify(error);
     console.log("ERROR!!!!!!!!!!!!!!!!!!")
-    console.log(error)
+    console.log(error.message)
     return error;
   }
 }

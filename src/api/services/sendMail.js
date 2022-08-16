@@ -26,11 +26,11 @@ async function sendMail(
       dynamic_template_data: templateData,
     };
 
-    if (MAIL_DEBUG) {
+    if (MAIL_DEBUG.toString().toLocaleLowerCase().equals("true")) {
       console.log("mail debug is on")
       message.mailSettings = {
         sandboxMode: {
-          enable: false,
+          enable: true,
         },
       };
 

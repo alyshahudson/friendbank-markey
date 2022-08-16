@@ -26,7 +26,7 @@ async function sendMail(
       dynamic_template_data: templateData,
     };
 
-    if (MAIL_DEBUG.toString().toLocaleLowerCase().equals("true")) {
+    if (MAIL_DEBUG === "true") {
       console.log("mail debug is on")
       message.mailSettings = {
         sandboxMode: {

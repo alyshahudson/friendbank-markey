@@ -295,7 +295,7 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
       [SPANISH]: 'PAGADO POR THE PARRISH COMMITTEE',
     },
     'smsDisclaimer': {
-      [ENGLISH]: 'By providing your cell phone number you consent to receive periodic campaign updates from the Parrish Committee. Text HELP for help, STOP to end. Message & data rates may apply. https://kyleparrishforcongress.com/privacy-policy',
+      [ENGLISH]: 'By providing your cell phone number you consent to receive periodic campaign updates from the Parrish Committee. Text HELP for help, STOP to end. Message & data rates may apply.', 
       [SPANISH]: 'Al proporcionar su número de teléfono celular usted consiente en recibir actualizaciones periódicas de la campaña de The Parrish Committee. Envíe un mensaje de texto que diga HELP para pedir ayuda o STOP para descontinuar los mensajes. Pueden aplicar tarifas de mensajes y data. https://kyleparrishforcongress.com/privacy-policy',
     },
     'genericError': {

@@ -291,8 +291,8 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
       [SPANISH]: 'https://kyleparrishforcongress.com/privacy-policy/',
     },
     'politicalDiclaimer': {
-      [ENGLISH]: 'PAID FOR BY THE PARRISH COMMITTEE',
-      [SPANISH]: 'PAGADO POR THE PARRISH COMMITTEE',
+      [ENGLISH]: 'PAID FOR BY THE COMMITTEE TO ELECT KYLE PARRISH',
+      [SPANISH]: 'PAGADO POR THE COMMITTEE TO ELECT KYLE PARRISH',
     },
     'smsDisclaimer': {
       [ENGLISH]: 'By providing your cell phone number you consent to receive periodic campaign updates from the Parrish Committee. Text HELP for help, STOP to end. Message & data rates may apply.', 

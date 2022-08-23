@@ -21,37 +21,37 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
       _id: 'default',
       type: 'image',
       source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_8667.HEIC',
-      alt: 'Ed at the Podium',
+      alt: 'Kyle at the Podium',
     },
     {
       _id: 'hoops',
       type: 'image',
       source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_8739.HEIC',
-      alt: 'Ed shooting hoops',
+      alt: 'Kyle shooting hoops',
     },
     {
       _id: 'air-flight-89',
       type: 'image',
       source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_8744.HEIC',
-      alt: 'Ed wearing his pair of Air Flight ‘89s',
+      alt: 'Kyle wearing his pair of Air Flight ‘89s',
     },
     {
       _id: 'ed-clapping',
       type: 'image',
       source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_9705.HEIC',
-      alt: 'Ed clapping at an event',
+      alt: 'Kyle clapping at an event',
     },
     {
       _id: 'ed-climate-march',
       type: 'image',
       source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_9796.HEIC',
-      alt: 'Ed at a climate march with young students',
+      alt: 'Kyle at a climate march with young students',
     },
     {
       _id: 'ed-serving',
       type: 'image',
       source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_9832.HEIC',
-      alt: 'Ed serving food',
+      alt: 'Kyle serving food',
     },
     {
       _id: 'ed-seiu',
@@ -69,13 +69,13 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
       _id: 'ed-ew-supporters',
       type: 'image',
       source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_9906.HEIC',
-      alt: 'Ed standing with supporters'
+      alt: 'Kyle standing with supporters'
     },
     {
       _id: 'ed-unite-here',
       type: 'image',
       source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_9914.HEIC',
-      alt: 'Ed marching with a labor union',
+      alt: 'Kyle marching with a labor union',
     },
   ];
 
@@ -89,7 +89,7 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
       _id: 'ed-climate-march',
       type: 'image',
       source: 'https://kyleparrish.s3.amazonaws.com/websiteimages/ActualPics/IMG_8089.HEIC',
-      alt: 'Ed at a climate march with young students',
+      alt: 'Kyle at a climate march with young students',
     },
   });
 
@@ -322,7 +322,7 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
     campaign: campaignId,
     email: 'admin@friendbank.us',
     password: hashedPassword,
-    firstName: 'Joe',
+    firstName: 'Aly',
     zip: '00000',
     emailFrequency: TRANSACTIONAL_EMAIL,
     createdAt: Date.now(),
@@ -334,7 +334,7 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
   const adminUser = userInsertResult.ops[0];
 
   const signups = db.collection('signups');
-  const signupSeed = new Array(50).fill({
+  const signupSeed = new Array(1).fill({
     email: `${Math.round(Math.random() * 10000)}@gmail.com`,
     recruitedBy: adminUser._id.toString(),
     campaign: campaign._id.toString(),

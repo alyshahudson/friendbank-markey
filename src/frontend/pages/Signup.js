@@ -15,6 +15,7 @@ import signupIdFields from '../forms/signupIdFields';
 import makeLocaleLink from '../utils/makeLocaleLink';
 import getCopy from '../utils/getCopy';
 import makeFormApiRequest from '../utils/makeFormApiRequest';
+import {DASHBOARD_ROUTE} from "../routes";
 
 const PostSignupContainer = styled.div`
   display: flex;
@@ -131,7 +132,10 @@ export default function Signup() {
           modalCopy={getCopy('signupPage.modalCopy').join('\n')}
           modalCloseLabel={getCopy('signupPage.modalCloseLabel')}
           customShareText={`${title} ${subtitle}`}
-          onClose={() => setIsModalOpen(false)}
+          onClose={() => {
+            setIsModalOpen(false)
+            window.location.href = makeLocaleLink(DASHBOARD_ROUTE);
+          }}
         />
       )}
       <SplitScreen media={media}>

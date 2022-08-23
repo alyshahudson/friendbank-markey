@@ -5,6 +5,7 @@ const { STAFF_ROLE } = require('../../shared/roles');
 const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
 
 (async function() {
+  // TODO: Modify this file to update the copy without droping the campaign
   console.log('Seeding database...');
 
   const client = await MongoClient.connect(process.env.MONGODB_URL, {
@@ -14,8 +15,9 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
 
   db = client.db();
 
-  await db.dropDatabase();
-
+  // await db.dropDatabase();
+  // await db.dropCollection('campaigns');
+  await db.dropCollection('media')
   const defaultMediaObjects = [
     {
       _id: 'default',
@@ -312,46 +314,46 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
     config,
   });
 
-  const campaign = campaignResult.ops[0];
-  const campaignId = campaign._id.toString();
+  // const campaign = campaignResult.ops[0];
+  // const campaignId = campaign._id.toString();
 
-  const hashedPassword = await passwordHash('password');
-  const users = db.collection('users');
+  // const hashedPassword = await passwordHash('password');
+  // const users = db.collection('users');
 
-  const userInsertResult = await users.insertOne({
-    campaign: campaignId,
-    email: 'admin@friendbank.us',
-    password: hashedPassword,
-    firstName: 'Aly',
-    zip: '00000',
-    emailFrequency: TRANSACTIONAL_EMAIL,
-    createdAt: Date.now(),
-    lastUpdatedAt: Date.now(),
-    lastAuthenticationUpdate: Date.now(),
-    role: STAFF_ROLE,
-  });
+  // const userInsertResult = await users.insertOne({
+  //   campaign: campaignId,
+  //   email: 'admin@friendbank.us',
+  //   password: hashedPassword,
+  //   firstName: 'Aly',
+  //   zip: '00000',
+  //   emailFrequency: TRANSACTIONAL_EMAIL,
+  //   createdAt: Date.now(),
+  //   lastUpdatedAt: Date.now(),
+  //   lastAuthenticationUpdate: Date.now(),
+  //   role: STAFF_ROLE,
+  // });
 
-  const adminUser = userInsertResult.ops[0];
+  // const adminUser = userInsertResult.ops[0];
 
-  const signups = db.collection('signups');
-  const signupSeed = new Array(1).fill({
-    email: `${Math.round(Math.random() * 10000)}@gmail.com`,
-    recruitedBy: adminUser._id.toString(),
-    campaign: campaign._id.toString(),
-    type: 'contact',
-    lastUpdatedAt: Date.now(),
-    firstName: 'First',
-    phone: '',
-    zip: '',
-    supportLevel: '',
-    volunteerLevel: '',
-  }).map((signup, index) => ({
-    ...signup,
-    _id: new ObjectId(),
-    lastName: `${index}`,
-    note: `This is a note ${Math.random()}`,
-  }));
-
-  await signups.insertMany(signupSeed);
+  // const signups = db.collection('signups');
+  // const signupSeed = new Array(1).fill({
+  //   email: `${Math.round(Math.random() * 10000)}@gmail.com`,
+  //   recruitedBy: adminUser._id.toString(),
+  //   campaign: campaign._id.toString(),
+  //   type: 'contact',
+  //   lastUpdatedAt: Date.now(),
+  //   firstName: 'First',
+  //   phone: '',
+  //   zip: '',
+  //   supportLevel: '',
+  //   volunteerLevel: '',
+  // }).map((signup, index) => ({
+  //   ...signup,
+  //   _id: new ObjectId(),
+  //   lastName: `${index}`,
+  //   note: `This is a note ${Math.random()}`,
+  // }));
+  //
+  // await signups.insertMany(signupSeed);
   process.exit(0);
 })();

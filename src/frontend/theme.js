@@ -7,7 +7,7 @@ const theme = {
     blue: '#005196',
     darkBlue: '#00284a',
     green: '#009645',
-    red: '#FF3333',
+    red: '#4B9CD3',
     ncblues: '#4B9CD3',
   },
   fonts: {
